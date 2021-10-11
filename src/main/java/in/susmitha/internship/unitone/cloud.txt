@@ -1,0 +1,87 @@
+AWS CLOUD COMPUTING
+
+AWS Compute:
+Compute resources can be considered the brains and processing power required by applications and systems to carry out computational tasks via series of instructions.
+Compute:
+Compute is closely related to common server components such as CPUs and RAM.
+A physical server within a data center would be considered a compute resource as it may have multiple CPU’s.
+Compute services can comprise of utilizing hundreds of EC2 instances which may be used continuously for months or even years processing millions of instructions.
+You can also utilize a few hundred milliseconds of compute resource to execute just a few lines of code within AWS lambda.
+
+Elastic Compute Cloud(EC2)
+EC2 allows you to deploy virtual servers within your AWS environment. Most people will require an EC2 instance within their environment as a part of least one of their solutions.
+The EC2 service can be broken down into following components:
+Amazon Machine Images(AMI)
+Instance types
+Instance Purchasing Options
+Tenancy
+User data
+Storage Options
+Security
+AMIs are essentially required that allows you to launch EC2 instance based on configuration within the AMI.
+There are different types of Instance types are categorized into different family types that offer distinct performance benefits.
+On Demand Instances.
+Reserved Instances
+Scheduled Instances
+Spot Instances
+On-Demand Capacity Reservations
+On-Demand Instances:
+Can be launched at any time.
+Can be used as long as needed
+Flat rate determined on the instance type.
+Typically used for short-term uses.
+Best for testing and Development.
+Reserved Instances:
+Purchased for a set period of time of reduced cost.
+All Up Front
+Partial Up Front
+NO Up Front
+Scheduled Instances:
+You have to pay for the reservations on a recurring schedule, either daily or weekly, or monthly.
+Spot Instances:
+Bid for a unused EC2 Compute resources
+No guarantee for a fixed period of time.
+Fluctuation of prices based on supply at a low prices.
+Your data allows you to enter commands that will run during the first boot cycle of that instance
+It performs functions upon boot such as to pull down any software you want.
+Selecting storage for your EC2 instance will depend on the instance selected, what you intend to use the instance for and how critical the data is by two kinds:
+Persistent Storage-
+By attaching EBS volumes
+Ephemeral Storage:
+Created by EC2 instances using local storage.
+During the creation of EC2 instance will be asked to select a Security Group for your instance.
+At the end of your EC2 instance creation, you will be need to select an existing Key Pair or create and download a new one.
+
+A Key Pair is made up of Public Key and a Private Key.
+A key Pair is made up of Public Key and Private Key
+The Function of Key Pairs is to encrypt the login information for Linux and Window EC2 instances, and then decrypt the same information allowing you to authenticate onto the instance.
+The Public Key is held and kept by AWS, the Private Key is your responsibility to keep and ensure that is not lost.
+It is possible to use the same key Pair on multiple instance.
+You can set up additional less privileged access controls, such as local Windows accounts.
+It is the responsibility of the user to maintain  and install the latest OS and security patches released by the OS vendor as dictated within the AWS shared responsibility model.
+Steps to launch EC2 instance:
+1.	Log Into Your AWS Account. Log into the AWS Management Console and set up your root account. ...
+2.	Launch Your Instance. Identify which instance type is best for your workload.
+3.	Configure Your Instance.
+4.	Connect to Your Instance.
+5.	Terminate Your Instance.
+
+To launch a new EC2 instance from an AMI
+Open the EC2 console.
+1.	From the navigation bar, choose AMIs.
+2.	Find the AMI that you want to use to launch a new instance. To begin, open the menu next to the search bar, and then choose one of the following:
+If the AMI that you’re using is one that you created, select Owned by me.
+If the AMI that you’re using is a public AMI, select Public images.
+If the AMI that you’re using is a private image that someone else shared with you, select Private images.
+Note: The search bar automatically provides filtering options as well as automatically matching AMI IDs.
+3.	Select the AMI, and then choose Launch.
+4.	Choose an instance type, and then choose Next: Configure Instance Details. Optionally  select configuration details, such as associating an IAM role with the instance.
+5.	Select Next: Add Storage. You can  use the default root volume type ,or select new type from the Volume Type drop down. Select Add New Volume if you want to add additional storage to your instance.
+6.	Select Next: Add Tags. You can  add custom tags to your instance to help you categorize your resources.
+7.	Select Next: Configure Security Group. You  associate a security group of instance to allow or block traffic to the instance.
+8.	Select Review and Launch. Review the instance details.
+9.	Select Previous to return to a previous screen to make changes. Select Launch when you are ready to launch the instance.
+10.	Select an existing key pair or create a new key pair, select the acknowledge agreement box, and then choose Launch Instances.
+11.	Choose View Instances to check the status of your instance.
+
+
